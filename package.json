@@ -1,0 +1,10 @@
+{
+  "name": "basic-node-lti",
+  "version": "1.0.0",
+  "description": "LTI template for Node",
+  "main": "index.js",
+  "repository": "ssh://mneldam@gerrit.instructure.com:29418/basic-node-lti",
+  "author": "Matt Neldam <mneldam@instructure.com>",
+  "license": "None",
+  "private": true
+}
