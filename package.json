@@ -6,5 +6,18 @@
   "repository": "ssh://mneldam@gerrit.instructure.com:29418/basic-node-lti",
   "author": "Matt Neldam <mneldam@instructure.com>",
   "license": "None",
-  "private": true
+  "private": true,
+  "scripts": {
+    "build": "babel src --out-dir lib --source-maps --ignore test.js",
+    "lint": "eslint src",
+    "test": "jest --config=jestconf.json"
+  },
+  "devDependencies": {
+    "@inst/eslint-config-opinionated-panda": "^1.0.3",
+    "babel-cli": "^6.26.0",
+    "babel-jest": "^21.0.2",
+    "babel-preset-env": "^1.6.0",
+    "eslint": "^4.7.2",
+    "jest": "^21.1.0"
+  }
 }

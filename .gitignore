@@ -1,0 +1,9 @@
+# Ignore Nodejs things
+node_modules/
+npm-debug.log
+
+# Ignore generated files
+coverage/*
+
+# Ignore built libs
+lib/*

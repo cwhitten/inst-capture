@@ -1,0 +1,25 @@
+{
+  // Sets the default linting settings to those of opinionated-panda, a
+  // fairly strict linting tool intended to catch as many problems as possible
+  // with the intent that specific things can be turned off given the right
+  // circumstances
+  "extends":
+    [ "@inst/opinionated-panda/server" ],
+  "rules": {
+    // we are not using flow in this package
+    "flowtype/require-valid-file-annotation": "off"
+  },
+  // override the standard rules for our test files to use the jest
+  // environment and turn off no magic numbers
+  "overrides": [
+    {
+      "files": [ "*.test.js" ],
+      "rules": {
+        "no-magic-numbers": "off"
+      },
+      "env": {
+          "jest": true
+      }
+    }
+  ]
+}
