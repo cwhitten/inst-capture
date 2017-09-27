@@ -8,6 +8,11 @@ ignore flag tells babel to not bother transpiling test files.
 
 * `lint`: runs eslint on all javascript files in the src folder
 
+* `start`: starts the express server
+
+* `prestart`: makes sure that the project has been built before trying to
+launch the server
+
 * `test`: runs jest using the configuration set in the jestconf configuration
 file for more information see below
 
@@ -19,6 +24,7 @@ file for more information see below
 based on environment
 * eslint for basic linting utility
 * jest for a testing platform
+* supertest for testing HTTP
 
 ## Config files
 * .babelrc: Change the target version of Node to the one used during development
