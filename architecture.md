@@ -8,10 +8,10 @@ ignore flag tells babel to not bother transpiling test files.
 
 * `lint`: runs eslint on all javascript files in the src folder
 
-* `start`: starts the express server
-
 * `prestart`: makes sure that the project has been built before trying to
 launch the server
+
+* `start`: starts the express server
 
 * `test`: runs jest using the configuration set in the jestconf configuration
 file for more information see below
@@ -24,6 +24,8 @@ file for more information see below
 based on environment
 * eslint for basic linting utility
 * jest for a testing platform
+* json5 for parsing json files with some extensions including allowing in-line
+comments.
 * supertest for testing HTTP
 
 ## Config files

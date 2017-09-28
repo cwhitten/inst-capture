@@ -11,7 +11,7 @@
     "build": "babel src --out-dir lib --source-maps --ignore test.js",
     "lint": "eslint src",
     "prestart": "yarn build",
-    "start": "node lib/server",
+    "start": "CANVAS_ID=10000000000001 CANVAS_KEY=VE2uPFWsoIn0Cj0mTfPcPguzlA5qOXCtdwG2Zb9DkaSW0YI7VqhiPUinOP5bHekJ node lib/server",
     "test": "jest --config=jestconf.json"
   },
   "devDependencies": {
@@ -24,6 +24,8 @@
     "supertest": "^3.0.0"
   },
   "dependencies": {
-    "express": "^4.15.5"
+    "@inst/lti-js": "^0.1.12",
+    "express": "^4.15.5",
+    "json5": "^0.5.1"
   }
 }

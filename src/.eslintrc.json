@@ -15,7 +15,8 @@
     {
       "files": [ "*.test.js" ],
       "rules": {
-        "no-magic-numbers": "off"
+        "no-magic-numbers": "off",
+        "max-nested-callbacks": "off"
       },
       "env": {
           "jest": true
