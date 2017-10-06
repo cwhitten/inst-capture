@@ -26,6 +26,7 @@
   "dependencies": {
     "@inst/lti-js": "^0.1.12",
     "express": "^4.15.5",
-    "json5": "^0.5.1"
+    "json5": "^0.5.1",
+    "lodash.merge": "^4.6.0"
   }
 }

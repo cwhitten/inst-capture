@@ -1,0 +1,44 @@
+
+{
+  // NOTE: All values listed as "null" are meant to be filled in at runtime, as indicated.
+  "tool_proxy_guid": null, // filled in with a random V4 UUID
+  "tool_consumer_profile": null, // filled with the Tool Consumer profile URL obtained from Canvas
+  "tool_profile": {
+    "product_instance": {
+      "guid": "fd75124a-140e-470f-944c-114d2d93bb40",
+      "product_info": {
+        "product_name": {
+          "default_value": "tool name",
+          "key": "tool.name"
+        },
+        "description": {
+          "default_value": "description of tool",
+          "key": "tool.description"
+        },
+        "product_version": null, // filled in from an external config file or env variable
+        "product_family": {
+          "code": "basic-node-lti",
+          "vendor": {
+            "code": "Instructure.com",
+            "vendor_name": {
+              "default_value": "Instructure",
+              "key": "tool.vendor.name"
+            }
+          }
+        }
+      }
+    },
+    "base_url_choice": [
+      {
+        // TODO Update @inst/lti-js so that this can be null as its README indicates
+        // https://gerrit.instructure.com/plugins/gitblit/blob/?r=lti-js.git&f=src/tool-provider.js&h=master#L36
+        "default_base_url": '', // filled in from an external config file or env variable
+        "selector": {
+          "applies_to": ["MessageHandler"]
+        }
+      }
+    ],
+  },
+  "enabled_capability": [
+  ]
+}

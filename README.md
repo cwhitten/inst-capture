@@ -1,6 +1,6 @@
 # basic-node-lti
 
-A template for the creation of an LTI compliant tool provider to communicate
+A template for the creation of an LTI2.0 compliant tool provider to communicate
 with an LTI tool consumer such as Canvas LMS.
 
 ## Build system

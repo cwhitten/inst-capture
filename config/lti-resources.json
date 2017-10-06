@@ -1,0 +1,23 @@
+
+{
+  "tool_profile": {
+    "resource_handler": [
+      {
+        "resource_type": {"code": "basic-node-lti"},
+        "resource_name": {
+          "default_value": "basic-node-lti",
+          "key": "basic-node-lti.resource.name"
+        },
+        "message": [{
+          "message_type": "basic-lti-launch-request",
+          "path": "lti_check",
+          "enabled_capability": [
+            // note: variables listed inside the parameter array below get auto-added to this list
+          ],
+          "parameter": [
+          ]
+        }]
+      }
+    ]
+  }
+}
