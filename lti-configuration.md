@@ -77,11 +77,14 @@ how those messages should be handled.
       * `message`: Defines how the launch request will be handled
         * `path`: Which route from the base url should handle the given
         message.
-        * `enabled_capability`: Contains the Canvas specific capabilities that
-        this tool will be requesting.
-        * `parameter`: The information that this tool will be
-        requesting from the LMS. This contains general LTI parameters
-        whereas `enabled_capability` contains Canvas specific parameters (?).
+        * `enabled_capability`: Contains the capabilities that this tool will
+        be requesting for example a user's name or where you want to have
+        Canvas put your tool's launch icon. We have included the capabilities to
+        get a user's full name as well as to place our tool in the course
+        navigation tray.
+        * `parameter`: Binds the variables received from the LMS to a name that
+        is defined by the tool provider. The custom parameters sent by the
+        tool consumer will get bound here.
 
 ## Editing lti-resources
  Fill in the basic profile information such as name and version numbers using

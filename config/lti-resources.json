@@ -13,6 +13,8 @@
           "path": "lti_check",
           "enabled_capability": [
             // note: variables listed inside the parameter array below get auto-added to this list
+            "Canvas.placements.courseNavigation",
+            "Person.name.full"
           ],
           "parameter": [
           ]

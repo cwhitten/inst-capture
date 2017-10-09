@@ -25,9 +25,10 @@ based on environment
 * eslint for basic linting utility
 * jest for a testing platform
 * json5 for parsing json files with some extensions including allowing in-line
-comments.
+comments
 * supertest for testing HTTP
 * lodash.merge for combining lti configuration into a single object
+* body-parser parse incoming HTTP requests
 
 ## Config files
 * .babelrc: Change the target version of Node to the one used during development

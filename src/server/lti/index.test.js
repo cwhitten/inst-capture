@@ -25,9 +25,14 @@ describe('LTI constructed appropriately', () => {
   });
   /* eslint-disable no-process-env */
 
-  it('opens lti config from the base file', () => {
+  it('opens lti config from the resources file', () => {
     expect(fs.readFileSync).toHaveBeenCalledWith(
-      path.resolve(__dirname, '../../../config/lti.json'));
+      path.resolve(__dirname, '../../../config/lti-resources.json'));
+  });
+
+  it('opens lti config from the description file', () => {
+    expect(fs.readFileSync).toHaveBeenCalledWith(
+      path.resolve(__dirname, '../../../config/lti-description.json'));
   });
 
   it('opens package.json from the base file', () => {
@@ -41,7 +46,7 @@ describe('LTI constructed appropriately', () => {
 
   it('uses hardcoded baseURL value', () => {
     expect(ToolProvider).toHaveBeenCalledWith(
-      expect.objectContaining({baseURL: '127.0.0.1:3000'})
+      expect.objectContaining({baseURL: 'http://127.0.0.1:3000/'})
     );
   });
 
@@ -65,7 +70,7 @@ describe('LTI constructed appropriately', () => {
 
   it('uses template from lti.json', () => {
     expect(ToolProvider).toHaveBeenCalledWith(
-      expect.objectContaining({template: {version: 'a version'}})
+      expect.objectContaining({version: 'a version'})
     );
   });
 

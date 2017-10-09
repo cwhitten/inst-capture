@@ -1,26 +1,14 @@
 import {ToolProvider} from '@inst/lti-js';
 // eslint-disable-next-line import/no-internal-modules
 import MemoryStore from '@inst/lti-js/lib/store/memory';
-import json5 from 'json5';
-import fs from 'fs';
-import path from 'path';
 import merge from 'lodash.merge';
 
-
+import openAndParseSync from './util';
 import getEnvVar from '../config';
 
-function openAndParse(filePath) {
-  try {
-    // eslint-disable-next-line no-sync
-    return json5.parse(fs.readFileSync(
-      path.resolve(__dirname, filePath)));
-  } catch (e) {
-    throw new Error(`could not open or parse ${filePath}`, e);
-  }
-}
-const packageJson = openAndParse('../../../package.json');
-const ltiDescriptionTemplate = openAndParse('../../../config/lti-description.json');
-const ltiResourcesTemplate = openAndParse('../../../config/lti-resources.json');
+const packageJson = openAndParseSync('../../../package.json');
+const ltiDescriptionTemplate = openAndParseSync('../../../config/lti-description.json');
+const ltiResourcesTemplate = openAndParseSync('../../../config/lti-resources.json');
 
 // TODO add this to lti-js
 /* eslint-disable camelcase */
