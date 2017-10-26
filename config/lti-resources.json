@@ -14,9 +14,14 @@
           "enabled_capability": [
             // note: variables listed inside the parameter array below get auto-added to this list
             "Canvas.placements.courseNavigation",
-            "Person.name.full"
+            "Person.name.full",
+            "Canvas.api.domain"
           ],
           "parameter": [
+            {
+              "name": "userImage",
+              "variable": "User.image"
+            }
           ]
         }]
       }

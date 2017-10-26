@@ -8,10 +8,10 @@
   "license": "None",
   "private": true,
   "scripts": {
-    "build": "babel src --out-dir lib --source-maps --ignore test.js",
+    "build": "babel src/server --out-dir lib --source-maps --ignore test.js",
     "lint": "eslint src",
     "prestart": "yarn build",
-    "start": "CANVAS_ID=10000000000001 CANVAS_KEY=VE2uPFWsoIn0Cj0mTfPcPguzlA5qOXCtdwG2Zb9DkaSW0YI7VqhiPUinOP5bHekJ node lib/server",
+    "start": "CANVAS_ID=10000000000001 CANVAS_KEY=VE2uPFWsoIn0Cj0mTfPcPguzlA5qOXCtdwG2Zb9DkaSW0YI7VqhiPUinOP5bHekJ node lib",
     "test": "jest --config=jestconf.json"
   },
   "devDependencies": {
@@ -28,6 +28,7 @@
     "body-parser": "^1.18.2",
     "express": "^4.15.5",
     "json5": "^0.5.1",
+    "lodash": "^4.17.4",
     "lodash.merge": "^4.6.0"
   }
 }

@@ -6,9 +6,9 @@ import merge from 'lodash.merge';
 import openAndParseSync from './util';
 import getEnvVar from '../config';
 
-const packageJson = openAndParseSync('../../../package.json');
-const ltiDescriptionTemplate = openAndParseSync('../../../config/lti-description.json');
-const ltiResourcesTemplate = openAndParseSync('../../../config/lti-resources.json');
+const packageJson = openAndParseSync('../../package.json');
+const ltiDescriptionTemplate = openAndParseSync('../../config/lti-description.json');
+const ltiResourcesTemplate = openAndParseSync('../../config/lti-resources.json');
 
 // TODO add this to lti-js
 /* eslint-disable camelcase */
@@ -33,7 +33,7 @@ const ltiRegistrationRequestTemplate = merge(
 
 const lti = new ToolProvider({
   version:  packageJson.version,
-  baseURL:  'http://127.0.0.1:3000/',
+  baseURL:  'http://127.0.0.1:3001/',
   store:    new MemoryStore({}),
   devID:    getEnvVar('CANVAS_ID'),
   devKey:   getEnvVar('CANVAS_KEY'),

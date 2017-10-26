@@ -7,3 +7,4 @@ coverage/*
 
 # Ignore built libs
 lib/*
+config/*
