@@ -15,7 +15,6 @@
     "test": "jest --config=jestconf.json"
   },
   "devDependencies": {
-    "@inst/eslint-config-opinionated-panda": "^1.0.3",
     "babel-cli": "^6.26.0",
     "babel-jest": "^21.0.2",
     "babel-preset-env": "^1.6.0",
@@ -24,7 +23,6 @@
     "supertest": "^3.0.0"
   },
   "dependencies": {
-    "@inst/lti-js": "^0.1.12",
     "body-parser": "^1.18.2",
     "express": "^4.15.5",
     "json5": "^0.5.1",
