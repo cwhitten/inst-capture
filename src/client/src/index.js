@@ -1,8 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Route } from 'react-router-dom'
 import './index.css';
 import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import Student from './Student'
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+const StudentRoute = ({match, location}) => (
+  <Student {...location.state } />
+)
+
+ReactDOM.render(
+  <BrowserRouter>
+    <div>
+    <Route path="/student/:id" component={StudentRoute}/>
+    <Route exact path="/" component={App}/>
+    </div>
+  </BrowserRouter>,
+  document.getElementById('root')
+);
